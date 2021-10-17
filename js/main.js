@@ -9,7 +9,7 @@ function getPlayer()
   chessapi.send(null);
   var r = JSON.parse(chessapi.response);
   console.log(r);
-  player= r.properties.username;
+  player= r.username;
 
   document.getElementById("name").innerText= player;
 };
