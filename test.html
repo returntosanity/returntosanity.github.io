@@ -1,8 +1,27 @@
 <!DOCTYPE html>
 <head>
 <title>Testing</title>
+<script src="js/main.js" charset="utf-8"></script>
 </head>
 
 <body>
-<p>testing</p>
+<div class="controls">
+  <label for="name_input">Enter a chess.com username</label>
+  <input type="text" name="name_input" id="inputfield" value="">
+  <button type="button" name="button" onclick="getPlayer()">Get Player</button>
+
+</div>
+<div class="player-container">
+    <div class="player" id="name">
+
+    </div>
+    <div class="player" id="rating">
+
+    </div>
+    <div class="player" id="registered">
+
+    </div>
+  </div>
+
+</div>
 </body>
