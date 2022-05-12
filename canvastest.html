@@ -92,7 +92,12 @@ function refreshCanvas(canvas)
 //Buttons
 function randomRect(color)
 {
-drawRect(c, boxes, randomInt(boxes-1), randomInt(boxes-1), "M",color);
+  console.log(boxes);
+  if(boxes.length > 0)
+{drawRect(c, boxes, randomInt(boxes-1), randomInt(boxes-1), "M",color);}
+else {
+  drawRect(c, boxsize, randomInt(boxsize-1), randomInt(boxsize-1), "M",color);
+}
 }
 function redraw()
 {
@@ -101,6 +106,10 @@ function redraw()
   drawGrid(c, boxes);
 }
 
+function randomInt(max)
+{ // min and max included
+  return Math.floor(Math.random() * (max - 0 + 1) + 0)
+}
 function randomInt(max)
 { // min and max included
   return Math.floor(Math.random() * (max - 0 + 1) + 0)
